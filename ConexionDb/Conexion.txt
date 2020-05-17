@@ -1,0 +1,1 @@
+mongodb+srv://prueba:Aleja2014.@cluster0-syui7.mongodb.net/test?retryWrites=true&w=majority

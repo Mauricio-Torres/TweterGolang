@@ -48,5 +48,10 @@ func Registro(w http.ResponseWriter, r *http.Request) {
 		return
 	}
 
+	if status {
+
+		return
+	}
+
 	w.WriteHeader(http.StatusCreated)
 }

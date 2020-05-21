@@ -17,6 +17,8 @@ func Manejador() {
 
 	// adicion de rutas
 	router.HandleFunc("/registro", middware.ChequeoDB(routers.Registro)).Methods("POST")
+	router.HandleFunc("/login", middware.ChequeoDB(routers.Loguer)).Methods("POST")
+	router.HandleFunc("/verperfil", middware.ChequeoDB(middware.ValidatorJWT(routers.VerPerfil))).Methods("GET")
 
 	PORT := os.Getenv("PORT")
 

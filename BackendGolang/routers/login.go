@@ -2,6 +2,7 @@ package routers
 
 import (
 	"encoding/json"
+	"fmt"
 	"net/http"
 	"time"
 
@@ -30,7 +31,8 @@ func Loguer(w http.ResponseWriter, r *http.Request) {
 
 	userRetorno, existe := db.Loguin(usuario.Email, usuario.Password)
 
-	if !existe {
+	fmt.Println(userRetorno)
+	if existe == false {
 		http.Error(w, "Password y/o Usuario invalido", 400)
 		return
 	}

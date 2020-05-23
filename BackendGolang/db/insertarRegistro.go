@@ -33,7 +33,6 @@ func InsertarRegistro(usuario models.Usuario) (string, bool, error) {
 
 /*ChequeoUsuario chequeo de existencia de usuario en la DB */
 func ChequeoUsuario(email string) (models.Usuario, bool, string) {
-
 	contexto, cancel := context.WithTimeout(context.Background(), 15*time.Second)
 	defer cancel()
 
@@ -48,6 +47,7 @@ func ChequeoUsuario(email string) (models.Usuario, bool, string) {
 	ID := usuario.ID.Hex()
 
 	if err != nil {
+
 		return usuario, false, ID
 	}
 

@@ -18,7 +18,7 @@ var IDUsuario string
 /*ProcesoToken extrae todos los valores del token enviado */
 func ProcesoToken(token string) (*models.Clain, bool, string, error) {
 
-	clave := []byte("generarToken") // clave para generar token
+	clave := []byte("generar token valido") // clave para generar token
 
 	claims := &models.Clain{}
 

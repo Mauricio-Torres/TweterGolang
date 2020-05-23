@@ -10,7 +10,7 @@ func Loguin(email string, password string) (models.Usuario, bool) {
 
 	usuario, encontrado, _ := ChequeoUsuario(email)
 
-	if !encontrado {
+	if encontrado == false {
 		return usuario, false
 	}
 

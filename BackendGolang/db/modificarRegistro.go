@@ -51,9 +51,9 @@ func ModificarRegistro(usuario models.Usuario, ID string) (bool, error) {
 		"$set": registro,
 	}
 
-	objId, _ := primitive.ObjectIDFromHex(ID)
+	id, _ := primitive.ObjectIDFromHex(ID)
 
-	filtro := bson.M{"_id": bson.M{"$eq": objId}}
+	filtro := bson.M{"_id": bson.M{"$eq": id}}
 
 	_, err := coleccion.UpdateOne(contexto, filtro, updateStrin)
 

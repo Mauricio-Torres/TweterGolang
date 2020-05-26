@@ -9,6 +9,7 @@ import (
 	"github.com/Mauricio-Torres/TweterGolang/models"
 )
 
+/*GrabarTweet almacena los tweet del usuario logueado*/
 func GrabarTweet(w http.ResponseWriter, r *http.Request) {
 
 	var mensaje models.GetTweet // mensaje que llega de front para ser almacenado

@@ -8,6 +8,7 @@ import (
 	"github.com/Mauricio-Torres/TweterGolang/models"
 )
 
+/*Registro  registra usuarios en mongo db*/
 func Registro(w http.ResponseWriter, r *http.Request) {
 
 	var usuario models.Usuario

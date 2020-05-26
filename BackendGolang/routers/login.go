@@ -14,7 +14,7 @@ import (
 /*Loguer router para Loguin del usuario*/
 func Loguer(w http.ResponseWriter, r *http.Request) {
 
-	w.Header().Add("content-type", "application/json")
+	w.Header().Add("content-Type", "application/json")
 	var usuario models.Usuario
 
 	err := json.NewDecoder(r.Body).Decode(&usuario)

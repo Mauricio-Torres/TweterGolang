@@ -8,6 +8,7 @@ import (
 	"github.com/Mauricio-Torres/TweterGolang/models"
 )
 
+/*ModificarPerfil modifica el la informacion del usuario logueado*/
 func ModificarPerfil(w http.ResponseWriter, r *http.Request) {
 
 	var usuario models.Usuario

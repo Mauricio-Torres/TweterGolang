@@ -10,8 +10,8 @@ import (
 	"go.mongodb.org/mongo-driver/mongo/options"
 )
 
-/*LeoTweet sirve como puente entre la base de datos y el middware */
-func LeoTweet(Id string, pagina int64) ([]*models.DevolverTweet, bool) {
+//LeoTweet sirve como puente entre la base de datos y el middware
+func LeoTweet(ID string, pagina int64) ([]*models.DevolverTweet, bool) {
 
 	contexto, cancel := context.WithTimeout(context.Background(), 15*time.Second)
 	defer cancel()
@@ -22,7 +22,7 @@ func LeoTweet(Id string, pagina int64) ([]*models.DevolverTweet, bool) {
 	var resultado []*models.DevolverTweet
 
 	condicion := bson.M{
-		"userid": Id,
+		"userid": ID,
 	}
 
 	// options permite definir y filtrar comportamientos en la base de datos mongo

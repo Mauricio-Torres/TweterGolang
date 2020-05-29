@@ -33,6 +33,10 @@ func Manejador() {
 	router.HandleFunc("/subirBanner", middware.ChequeoDB(middware.ValidatorJWT(routers.SubirBanner))).Methods("POST")
 	router.HandleFunc("/obtenerBanner", middware.ChequeoDB(routers.ObtenerBanner)).Methods("GET")
 
+	router.HandleFunc("/listaUsuarios", middware.ChequeoDB(middware.ValidatorJWT(routers.ListaUsuarios))).Methods("GET")
+
+	router.HandleFunc("/leoTweetsSeguidores", middware.ChequeoDB(middware.ValidatorJWT(routers.LeoTweetsSeguidores))).Methods("GET")
+
 	PORT := os.Getenv("PORT")
 
 	if PORT == "" {

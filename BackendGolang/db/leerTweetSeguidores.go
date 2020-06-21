@@ -30,7 +30,7 @@ func LeerTweetAllSeguidores(ID string, pagina int) ([]models.DevolverTweetSeguid
 		},
 	})
 	condiciones = append(condiciones, bson.M{"$unwind": "$tweet"})
-	condiciones = append(condiciones, bson.M{"$sort": bson.M{"tweet.fecha": 1}})
+	condiciones = append(condiciones, bson.M{"$sort": bson.M{"tweet.fecha": -1}})
 	condiciones = append(condiciones, bson.M{"$skip": skip})
 	condiciones = append(condiciones, bson.M{"$limit": 20})
 
